@@ -1,0 +1,23 @@
+{
+  "name": "pw-snapshot-name",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "get-ready": "cross-env npx --yes rimraf --glob ./node_modules/.cache/playwright --no-interactive && playwright install",
+    "playwright": "cross-env npm run get-ready && playwright test --config playwright.config.mts",
+    "playwright-update-snapshots": "playwright test --update-snapshots --config playwright.config.mts",
+    "typecheck-once": "tsc"
+  },
+  "dependencies": {
+    "@playwright/experimental-ct-react": "1.44.0",
+    "@playwright/test": "1.44.0",
+    "@types/node": "20.12.10",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.2.1",
+    "cross-env": "7.0.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.4.5"
+  }
+}
